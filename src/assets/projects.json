@@ -1,0 +1,37 @@
+[
+  {
+    "id": "pokedex",
+    "title": "Pokedex Android App",
+    "short": "Kotlin, MVVM, Room, Retrofit, Jetpack Compose",
+    "description": "Clean architecture, offline-first with Room, CI/CD pipeline (GitHub Actions + Fastlane).",
+    "tags": [
+      "Kotlin",
+      "MVVM",
+      "Jetpack Compose"
+    ],
+    "repo": "https://github.com/ArchanPatel/pokedex",
+    "highlighted": true
+  },
+  {
+    "id": "subwai",
+    "title": "SubwAI Inventory System",
+    "short": "Python, Next.js, MongoDB, Google Cloud API",
+    "description": "Real-time inventory with computer vision; secure franchise-specific data.",
+    "tags": [
+      "Python",
+      "Next.js",
+      "Computer Vision"
+    ],
+    "repo": "https://github.com/ArchanPatel/subwai",
+    "highlighted": true
+  },
+  {
+    "id": "other",
+    "title": "Other Projects",
+    "short": "Add your other projects here \u2014 editable in projects.json",
+    "description": "Use this item as a placeholder for projects not listed on your resume.",
+    "tags": [
+      "placeholder"
+    ]
+  }
+]

@@ -7,7 +7,7 @@ export const Projects = () => {
       name: 'Hirely',
       description: 'AI-powered job application platform streamlining the hiring process with intelligent matching and automation.',
       tech: ['Kotlin', 'MVVM', 'REST APIs','Jetpack Compose', 'Retrofit', 'Hilt'],
-      githubUrl: 'https://github.com/ArchanPatel?tab=repositories'
+      githubUrl: 'https://github.com/ArchanPatel/Hirely'
     },
     {
       name: 'Pokédex Android App',
@@ -16,22 +16,16 @@ export const Projects = () => {
       githubUrl: 'https://github.com/ArchanPatel?tab=repositories'
     },
     {
-      name: 'SubwAI Inventory System',
-      description: 'Real-time inventory tracking system for Subway franchises using computer vision and secure cloud authentication.',
-      tech: ['Python', 'Next.js', 'MongoDB', 'Google Cloud', 'Computer Vision'],
-      githubUrl: 'https://github.com/ArchanPatel?tab=repositories'
-    },
-    {
       name: 'Film Catalog App',
       description: 'Comprehensive movie database application with search, ratings, and personalized recommendations.',
       tech: ['Android', 'Kotlin', 'REST APIs'],
-      githubUrl: 'https://github.com/ArchanPatel?tab=repositories'
+      githubUrl: 'https://github.com/ArchanPatel/FilmCatalogApp'
     },
     {
       name: 'News Reader App',
       description: 'Modern news aggregation app with real-time updates and customizable content feeds.',
       tech: ['Android', 'Kotlin', 'News API'],
-      githubUrl: 'https://github.com/ArchanPatel?tab=repositories'
+      githubUrl: 'https://github.com/ArchanPatel/NewsReaderApp'
     },
     {
       name: 'Pokemon Tournament',
@@ -44,7 +38,19 @@ export const Projects = () => {
       description: 'Intelligent game-playing AI using machine learning algorithms and strategic decision-making.',
       tech: ['Python', 'Machine Learning', 'AI Algorithms'],
       githubUrl: 'https://github.com/ArchanPatel?tab=repositories'
-    }
+    },
+    {
+      name: 'SubwAI Inventory System',
+      description: 'Real-time inventory tracking system for Subway franchises using computer vision and secure cloud authentication.',
+      tech: ['Python', 'Next.js', 'MongoDB', 'Google Cloud', 'Computer Vision'],
+      githubUrl: 'https://github.com/ArchanPatel/subwai'
+    },
+    {
+      name: 'Personal Website',
+      description: 'Portfolio website showcasing projects, experience, and skills with a modern design and responsive layout.',
+      tech: ['React', 'TypeScript', 'Tailwind CSS'],
+      githubUrl: 'https://archanpatel.github.io'
+    },
   ], []);
 
   return (

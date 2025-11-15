@@ -24,18 +24,22 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
         >
           Archan Patel
         </button>
-        <Navigation
-          activeSection={activeSection}
-          onNavigate={onNavigate}
-          isMobile={true}
-          isMenuOpen={isOpen}
-          onToggleMenu={toggle}
-        />
-        <Navigation
-          activeSection={activeSection}
-          onNavigate={onNavigate}
-          isMobile={false}
-        />
+        <div className="md:hidden">
+          <Navigation
+            activeSection={activeSection}
+            onNavigate={onNavigate}
+            isMobile={true}
+            isMenuOpen={isOpen}
+            onToggleMenu={toggle}
+          />
+        </div>
+        <div className="hidden md:block">
+          <Navigation
+            activeSection={activeSection}
+            onNavigate={onNavigate}
+            isMobile={false}
+          />
+        </div>
       </div>
     </header>
   );

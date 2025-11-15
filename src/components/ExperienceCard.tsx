@@ -14,7 +14,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, company, 
     <ul className="space-y-2 text-gray-300">
       {achievements.map((achievement, idx) => (
         <li key={idx} className="flex gap-2">
-          <span className="text-blue-400 mt-1.5 flex-shrink-0">•</span>
+          <span className="text-blue-400 flex-shrink-0 leading-relaxed">•</span>
           <span>{achievement}</span>
         </li>
       ))}

@@ -11,7 +11,7 @@ import { Contact } from './sections/Contact';
 import { Footer } from './components/Footer';
 
 function App() {
-  const sectionIds = useMemo(() => ['home', 'about', 'experience', 'projects', 'contact'], []);
+  const sectionIds = useMemo(() => ['home', 'about', 'experience', 'projects', 'education', 'contact'], []);
   const activeSection = useScrollSpy(sectionIds);
   const scrollToSection = useSmoothScroll();
 

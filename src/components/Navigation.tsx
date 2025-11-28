@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { Menu, X } from 'lucide-react';
-
 
 export const Navigation: React.FC<NavigationProps> = ({ activeSection, onNavigate, isMobile, isMenuOpen, onToggleMenu }) => {
   const navItems = useMemo(() => [
@@ -23,14 +23,14 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onNavigat
       <>
         <button
           onClick={onToggleMenu}
-          className="p-2 text-gray-300 hover:text-white transition-colors z-50"
+          className="p-2 text-gray-300 hover:text-white transition-colors relative z-[60]"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         
-        {isMenuOpen && (
-          <div className="fixed inset-0 bg-gray-900 z-40 pt-20">
+        {isMenuOpen && createPortal(
+          <div className="fixed inset-0 bg-gray-900 z-[55] pt-20">
             <nav className="flex flex-col items-center space-y-6 p-8">
               {navItems.map(({ id, label }) => (
                 <button
@@ -44,7 +44,8 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onNavigat
                 </button>
               ))}
             </nav>
-          </div>
+          </div>,
+          document.body
         )}
       </>
     );
@@ -66,6 +67,7 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onNavigat
     </nav>
   );
 };
+
 interface NavigationProps {
   activeSection: string;
   onNavigate: (sectionId: string) => void;

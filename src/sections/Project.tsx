@@ -5,7 +5,7 @@ export const Projects = () => {
   const projects = useMemo(() => [
     {
       name: 'Hirely',
-      description: 'AI-powered job application platform streamlining the hiring process with intelligent matching and automation.',
+      description: 'Developed recruitment management app with transactional Room operations, reducing sync errors by 50% during offline-to-online transitions.',
       tech: ['Kotlin', 'MVVM', 'REST APIs','Jetpack Compose', 'Retrofit', 'Hilt'],
       githubUrl: 'https://github.com/ArchanPatel/Hirely'
     },
@@ -23,7 +23,7 @@ export const Projects = () => {
     },
     {
       name: 'News Reader App',
-      description: 'Modern news aggregation app with real-time updates and customizable content feeds.',
+      description: 'Built news aggregation app with offline-first architecture using Room persistence, Retrofit API integration, and Kotlin Flow for reactive data streams.',
       tech: ['Android', 'Kotlin', 'News API'],
       githubUrl: 'https://github.com/ArchanPatel/NewsReaderApp'
     },

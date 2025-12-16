@@ -9,11 +9,11 @@ export const Experience = () => {
       location: 'Toronto, ON',
       period: 'Aug 2024 – Present',
       achievements: [
-        'Spearheaded development of scalable Android design system with Material Design 3 and Jetpack Compose',
-        'Implemented asynchronous API layer with Kotlin Coroutines + Flow, improving app response times by 25%',
-        'Refactored multi-factor authentication flow for major global financial institution',
-        'Built biometric authentication and secure storage features using Android BiometricPrompt API',
-        'Contributed to cross-platform development using React Native'
+        'Architected and shipped 2 fintech Android apps serving 5M+ users with 99.9% crash-free rate using Jetpack Compose, MVVM, Kotlin Coroutines/Flow, and Hilt dependency injection',
+        'Reduced app cold start time by 38% and ANR rate by 42% through performance profiling, background threading optimization, and implementation of Baseline Profiles',
+        'Built secure authentication with BiometricPrompt, Android Keystore encryption, MFA, and OAuth 2.0, achieving PCI DSS compliance and reducing auth failures by 28%',
+        'Created scalable Material 3 design system with 40+ reusable Compose components, reducing UI code duplication by 45% and accelerating feature development by 30%',
+        'Established comprehensive testing strategy (85% coverage) with JUnit, Mockito, Espresso, and Compose UI tests integrated into CI/CD pipeline with GitHub Actions'
       ]
     },
     {
@@ -22,10 +22,10 @@ export const Experience = () => {
       location: 'Toronto, ON',
       period: 'May 2021 – Aug 2021',
       achievements: [
-        'Architected production-ready Android app with Clean Architecture supporting 500+ concurrent users',
-        'Developed real-time BLE GATT protocol data pipeline, improving transmission speed by 20%',
-        'Implemented robust JSON serialization with 99.5% data integrity across device network',
-        'Created responsive Material Design UI across various device sizes'
+        'Built TraceSCAN Connect Android app from ground up with Clean Architecture, MVVM, Room persistence, and Kotlin Flow, supporting 500+ concurrent users across 26+ user flows',
+        'Engineered Bluetooth Low Energy (BLE) sync pipeline with WorkManager achieving 95% sync success rate for IoT device-to-app data transfer',
+        'Implemented offline-first architecture with Retrofit, Moshi, Room caching, and automatic retry mechanisms, achieving 99.5% data integrity',
+        'Optimized UI performance and ensured WCAG 2.1 Level AA accessibility compliance with ViewBinding, TalkBack support, and proper content descriptions'
       ]
     },
     {

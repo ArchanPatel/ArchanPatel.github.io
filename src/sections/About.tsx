@@ -10,41 +10,35 @@ export const About = () => {
   ], []);
 
   return (
-    <section id="about" className="py-20 px-6 bg-gray-800">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">About Me</h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="text-gray-300 space-y-4">
-            <p className="text-lg">
+    <section id="about" className="py-24 md:py-32 px-6 bg-[#f7f6f2]">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-[0.7fr_1.3fr] gap-12 md:gap-20">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#b45d38] mb-4">01 / About</p>
+            <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-[#242724]">A little about me</h2>
+          </div>
+          <div className="text-[#555b55] space-y-5 leading-8">
+            <p className="text-base md:text-lg">
               I'm an Android Developer passionate about creating performant, user-friendly mobile applications.
-              Currently working at <span className="text-blue-400 font-semibold">Konrad Group</span>, I specialize 
-              in building scalable design systems and implementing modern Android architectures.
+              Currently working at <span className="text-[#242724] font-semibold">Konrad Group</span>, I specialize
+              in building scalable and modern Android applications.
             </p>
-            <p className="text-lg">
-              I'm pursuing my <span className="text-blue-400 font-semibold">Master's in Computer Science</span> with 
-              a specialization in Artificial Intelligence at Georgia Institute of Technology, building on my foundation 
+            <p className="text-base md:text-lg">
+              I'm pursuing my <span className="text-[#242724] font-semibold">Master's in Computer Science</span> with
+              a specialization in <span className="text-[#242724] font-semibold">Artificial Intelligence</span> at Georgia Institute of Technology, building on my foundation 
               from the University of Waterloo.
             </p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               With experience across Android, full-stack development, and CI/CD pipelines, I bring a comprehensive 
               approach to software engineering, always focusing on clean code, best practices, and delivering 
               exceptional user experiences.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="mt-2 md:mt-10 border-t border-[#242724]/15">
             {skills.map(({ category, items }) => (
-              <div key={category}>
-                <h3 className="text-xl font-semibold text-blue-400 mb-3">{category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+              <div key={category} className="grid sm:grid-cols-[9rem_1fr] gap-2 sm:gap-6 py-4 border-b border-[#242724]/15">
+                <h3 className="text-sm font-semibold text-[#242724]">{category}</h3>
+                <p className="text-sm leading-6 text-[#656962]">{items.join('  /  ')}</p>
               </div>
             ))}
           </div>

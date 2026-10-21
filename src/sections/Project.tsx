@@ -51,13 +51,24 @@ export const Projects = () => {
       tech: ['React', 'TypeScript', 'Tailwind CSS'],
       githubUrl: 'https://archanpatel.github.io'
     },
+    {
+      name: 'Vouch – Mobile Social Travel Application',
+      description: 'Jan 2026 – Present. Architecting a cross-platform travel social media platform using a KMP monorepo for shared domain and data layers, with native Jetpack Compose and SwiftUI interfaces. Engineered an offline-first itinerary sync engine utilizing Kotlin Flow and multiplatform data caching.',
+      tech: ['KMP', 'Jetpack Compose', 'SwiftUI', 'Coroutines']
+    },
   ], []);
 
   return (
-    <section id="projects" className="py-20 px-6 bg-gray-800">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+    <section id="projects" className="py-24 md:py-32 px-6 bg-[#f7f6f2]">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-12">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#b45d38] mb-4">03 / Selected work</p>
+            <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-[#242724]">Projects</h2>
+          </div>
+          <p className="max-w-sm text-sm leading-6 text-[#656962]">A mix of Android, full-stack, and personal projects.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-x-12">
           {projects.map((project) => (
             <ProjectCard key={project.name} {...project} />
           ))}

@@ -1,25 +1,23 @@
 import React from 'react';
-import { Briefcase } from 'lucide-react';
 
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, company, location, period, achievements }) => (
-  <div className="bg-gray-800 rounded-lg p-6 hover:shadow-xl transition-shadow border border-gray-700">
-    <div className="flex items-start gap-3 mb-4">
-      <Briefcase className="text-blue-400 mt-1 flex-shrink-0" size={24} />
-      <div className="flex-1">
-        <h3 className="text-xl font-bold text-white">{title}</h3>
-        <p className="text-blue-400 font-semibold">{company}</p>
-        <p className="text-gray-400 text-sm">{location} | {period}</p>
+  <article className="py-7 md:py-8 border-b border-[#242724]/20">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-6 mb-4">
+      <div>
+        <h3 className="text-xl font-semibold tracking-tight text-[#242724]">{title}</h3>
+        <p className="mt-1 text-[#b45d38] font-medium">{company}</p>
       </div>
+      <p className="mt-1 sm:mt-1 text-sm text-[#656962] sm:text-right">{period}<br />{location}</p>
     </div>
-    <ul className="space-y-2 text-gray-300">
+    <ul className="space-y-2 text-sm leading-6 text-[#555b55]">
       {achievements.map((achievement, idx) => (
-        <li key={idx} className="flex gap-2">
-          <span className="text-blue-400 flex-shrink-0 leading-relaxed">•</span>
+        <li key={idx} className="flex gap-3">
+          <span className="text-[#b45d38] flex-shrink-0 leading-6">—</span>
           <span>{achievement}</span>
         </li>
       ))}
     </ul>
-  </div>
+  </article>
 );
 
 interface ExperienceCardProps {

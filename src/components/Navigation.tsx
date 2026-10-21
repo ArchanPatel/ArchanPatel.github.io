@@ -23,21 +23,22 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onNavigat
       <>
         <button
           onClick={onToggleMenu}
-          className="p-2 text-gray-300 hover:text-white transition-colors relative z-[60]"
+          className="relative z-[60] p-2 text-[#242724] transition-colors hover:text-[#b45d38]"
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         
         {isMenuOpen && createPortal(
-          <div className="fixed inset-0 bg-gray-900 z-[55] pt-20">
-            <nav className="flex flex-col items-center space-y-6 p-8">
+          <div className="fixed inset-0 bg-[#f7f6f2] text-[#242724] z-[55] pt-20">
+            <nav aria-label="Main navigation" className="flex flex-col items-center gap-5 p-8">
               {navItems.map(({ id, label }) => (
                 <button
                   key={id}
                   onClick={() => handleClick(id)}
-                  className={`text-2xl transition-colors ${
-                    activeSection === id ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                  className={`text-2xl font-serif transition-colors ${
+                    activeSection === id ? 'text-[#b45d38]' : 'text-[#656962] hover:text-[#242724]'
                   }`}
                 >
                   {label}
@@ -52,13 +53,13 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onNavigat
   }
 
   return (
-    <nav className="hidden md:flex space-x-8">
+    <nav aria-label="Main navigation" className="hidden md:flex items-center gap-7">
       {navItems.map(({ id, label }) => (
         <button
           key={id}
           onClick={() => onNavigate(id)}
-          className={`transition-colors ${
-            activeSection === id ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+          className={`text-sm transition-colors ${
+            activeSection === id ? 'text-[#b45d38]' : 'text-[#656962] hover:text-[#242724]'
           }`}
         >
           {label}

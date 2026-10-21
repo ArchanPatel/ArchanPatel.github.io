@@ -16,7 +16,7 @@ function App() {
   const scrollToSection = useSmoothScroll();
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-[#f7f6f2] text-[#242724] antialiased">
       <Header activeSection={activeSection} onNavigate={scrollToSection} />
       <Hero onNavigate={scrollToSection} />
       <About />

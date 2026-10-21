@@ -1,34 +1,25 @@
 import React from 'react';
-import { ExternalLink, Code } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, tech, githubUrl }) => (
-  <div className="bg-gray-800 rounded-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-700">
-    <div className="flex items-start justify-between mb-4">
-      <div className="flex items-start gap-3">
-        <Code className="text-blue-400 mt-1 flex-shrink-0" size={24} />
-        <h3 className="text-xl font-bold text-white">{name}</h3>
-      </div>
+  <article className="py-7 border-t border-[#242724]/20">
+    <div className="flex items-start justify-between gap-4 mb-3">
+      <h3 className="font-serif text-2xl text-[#242724]">{name}</h3>
       {githubUrl && (
         <a
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-colors"
+          className="mt-1 text-[#656962] hover:text-[#b45d38] transition-colors"
           aria-label={`View ${name} on GitHub`}
         >
-          <ExternalLink size={20} />
+          <ArrowUpRight size={20} />
         </a>
       )}
     </div>
-    <p className="text-gray-300 mb-4">{description}</p>
-    <div className="flex flex-wrap gap-2">
-      {tech.map((t) => (
-        <span key={t} className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">
-          {t}
-        </span>
-      ))}
-    </div>
-  </div>
+    <p className="text-sm leading-6 text-[#555b55] mb-4">{description}</p>
+    <p className="text-xs leading-5 text-[#777c76]">{tech.join('  ·  ')}</p>
+  </article>
 );
 
 interface ProjectCardProps {

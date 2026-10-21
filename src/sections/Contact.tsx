@@ -1,47 +1,50 @@
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 export const Contact = () => (
-  <section id="contact" className="py-20 px-6 bg-gray-800">
-    <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-white mb-6">Let's Connect</h2>
-      <p className="text-xl text-gray-300 mb-12">
-        I'm always open to discussing new opportunities, projects, or ideas.
-      </p>
-      <div className="flex flex-wrap justify-center gap-6">
+  <section id="contact" className="py-24 md:py-32 px-6 bg-[#242724] text-[#f7f6f2]">
+    <div className="max-w-5xl mx-auto grid md:grid-cols-[0.7fr_1.3fr] gap-12 md:gap-20">
+      <div>
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e8b49a] mb-4">05 / Contact</p>
+        <h2 className="font-serif text-4xl md:text-5xl tracking-tight">Let's connect</h2>
+      </div>
+      <div>
+        <p className="text-lg leading-7 text-white/75 mb-8">
+          I'm always open to discussing new opportunities, projects, or ideas.
+        </p>
+        <div className="flex flex-wrap gap-x-8 gap-y-4 border-y border-white/20 py-5">
         <a
           href="mailto:archanmehulpatel@gmail.com"
-          className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2 text-lg"
+          className="text-[#e8b49a] hover:text-white transition-colors flex items-center gap-2"
         >
-          <Mail size={24} />
-          Email Me
+          <Mail size={18} />
+          Email me
         </a>
         <a
           href="tel:+16472271666"
-          className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors flex items-center gap-2 text-lg"
+          className="text-[#e8b49a] hover:text-white transition-colors flex items-center gap-2"
         >
-          <Phone size={24} />
-          Call Me
+          <Phone size={18} />
+          Call me
         </a>
-      </div>
-      <div className="mt-12 flex justify-center gap-6">
         <a
           href="https://github.com/ArchanPatel"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-colors"
-          aria-label="GitHub profile"
+          className="text-[#e8b49a] hover:text-white transition-colors flex items-center gap-2"
         >
-          <Github size={32} />
+          <Github size={18} />
+          GitHub
         </a>
         <a
           href="https://www.linkedin.com/in/archanpatel1/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-colors"
-          aria-label="LinkedIn profile"
+          className="text-[#e8b49a] hover:text-white transition-colors flex items-center gap-2"
         >
-          <Linkedin size={32} />
+          <Linkedin size={18} />
+          LinkedIn
         </a>
+        </div>
       </div>
     </div>
   </section>
